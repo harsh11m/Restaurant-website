@@ -1,0 +1,220 @@
+/* ==========================================================================
+   HOME PAGE STYLES
+   ========================================================================== */
+
+/* -------------------- Hero -------------------- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: var(--nav-height);
+  background:
+    linear-gradient(180deg, rgba(12,15,20,0.35) 0%, rgba(12,15,20,0.85) 85%),
+    radial-gradient(ellipse at 30% 20%, rgba(201,162,75,0.16), transparent 55%),
+    var(--color-midnight);
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(115deg, transparent 0 120px, rgba(201,162,75,0.04) 120px 121px);
+  pointer-events: none;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-lg);
+  align-items: center;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; }
+}
+
+.hero-copy h1 {
+  font-size: var(--fs-hero);
+  margin-top: var(--space-sm);
+}
+
+.hero-copy h1 em {
+  font-style: normal;
+  color: var(--color-gold-bright);
+}
+
+.hero-copy p {
+  color: var(--color-ivory-dim);
+  max-width: 480px;
+  margin-top: var(--space-sm);
+  font-size: 1.05rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.hero-stats {
+  display: flex;
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-line);
+}
+
+.hero-stats .stat strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--color-gold-bright);
+}
+.hero-stats .stat span {
+  font-size: var(--fs-small);
+  color: var(--color-ivory-dim);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.hero-visual {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  border: 1px solid var(--color-line);
+}
+
+.hero-visual img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+
+.hero-visual .plate-badge {
+  position: absolute;
+  bottom: var(--space-md);
+  left: var(--space-md);
+  right: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  background: rgba(12,15,20,0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.plate-badge .dish { font-family: var(--font-display); font-size: 1.1rem; }
+.plate-badge .price { color: var(--color-gold-bright); font-weight: 700; }
+
+/* -------------------- Why Choose Us -------------------- */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+@media (max-width: 980px) { .why-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .why-grid { grid-template-columns: 1fr; } }
+
+.why-card {
+  padding: var(--space-md);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  background: linear-gradient(160deg, var(--color-midnight-light), var(--color-midnight));
+  transition: transform var(--dur-med) var(--ease-standard), border-color var(--dur-med) var(--ease-standard);
+}
+.why-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-gold);
+}
+
+.why-icon {
+  font-size: 2rem;
+  margin-bottom: var(--space-sm);
+}
+
+.why-card h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+.why-card p { color: var(--color-ivory-dim); font-size: 0.92rem; }
+
+/* -------------------- Featured Menu -------------------- */
+.menu-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+@media (max-width: 980px) { .menu-preview-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px) { .menu-preview-grid { grid-template-columns: 1fr; } }
+
+.dish-card {
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-midnight-light);
+  transition: transform var(--dur-med) var(--ease-standard), border-color var(--dur-med) var(--ease-standard);
+}
+.dish-card:hover { transform: translateY(-6px); border-color: var(--color-gold); }
+
+.dish-info { padding: var(--space-md); }
+
+.dish-info-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-sm);
+  margin-bottom: 0.5rem;
+}
+
+.dish-info-head h3 { font-size: 1.3rem; }
+
+.dish-price {
+  color: var(--color-gold-bright);
+  font-weight: 700;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.dish-info p { color: var(--color-ivory-dim); font-size: 0.9rem; }
+
+.menu-preview-footer {
+  text-align: center;
+  margin-top: var(--space-lg);
+}
+
+/* -------------------- CTA / Reservation Band -------------------- */
+.cta-band {
+  position: relative;
+  padding-block: var(--space-lg);
+  text-align: center;
+  background:
+    linear-gradient(180deg, rgba(12,15,20,0.6), rgba(12,15,20,0.9)),
+    url('cta-bg.jpg') center/cover fixed;
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+}
+.cta-band h2 { font-size: var(--fs-h1); }
+.cta-band p { color: var(--color-ivory-dim); margin-top: var(--space-sm); }
+.cta-band .btn { margin-top: var(--space-md); }
+
+/* -------------------- Testimonials -------------------- */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+@media (max-width: 860px) { .testimonial-grid { grid-template-columns: 1fr; } }
+
+.testimonial-card {
+  padding: var(--space-md);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  background: var(--color-midnight-light);
+}
+.testimonial-card .stars { color: var(--color-gold); letter-spacing: 0.15em; margin-bottom: var(--space-sm); }
+.testimonial-card blockquote { font-family: var(--font-display); font-size: 1.15rem; font-style: italic; }
+.testimonial-card cite { display: block; margin-top: var(--space-sm); font-style: normal; color: var(--color-ivory-dim); font-size: 0.85rem; }
