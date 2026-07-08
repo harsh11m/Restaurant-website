@@ -90,7 +90,7 @@ This site is deployed on **GitHub Pages**:
 
 1. Repository → **Settings** → **Pages**
 2. Source: `main` branch, `/ (root)` folder
-3. Live at: `https://harsh11m.github.io/velora-kitchen-restaurant-website/`
+3. Live at: `https://harsh11m.github.io/Restaurant-website/`
 
 ---
 
