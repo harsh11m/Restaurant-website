@@ -2,7 +2,7 @@
 
 A complete, multi-page responsive restaurant website built as a Week 4 web development project. Velora Kitchen brings together a dark-luxury visual identity, a full ten-category menu, and a validated booking form across four fully linked pages.
 
-**Live site:** https://harsh11m.github.io/velora-kitchen-restaurant-website/
+**Live site:** https://harsh11m.github.io/Restaurant-website/
 
 ---
 
